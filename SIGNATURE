@@ -14,11 +14,11 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 1d0cd87ad649ed7bd7511e399b2b55aef4629ff5 ChangeLog
+SHA1 1e1b51b1d4df2aa847390818784dfc31b999090b ChangeLog
 SHA1 8c5f80bcbdeafc9da98abbcbc9db757d85a74a00 MANIFEST
-SHA1 00cf67992e7f91c2fe2e43c47db8d5ef75e2f7b3 META.yml
-SHA1 c712bcef02c7abab1fc4500403d838889ff2284e Makefile.PL
-SHA1 ffd3b9b029e61dac32f91cabaabd054185e04e2c README
+SHA1 3453f8b8b47991678d23eaf3431b4ae78bf8e750 META.yml
+SHA1 aba6cce1e94728e9de27dbdfd86d1eba8da7371d Makefile.PL
+SHA1 b3b84966a5ad43e1b85c0e74244169d36d11e2d3 README
 SHA1 7e2cfa1b9efe0d502ee57717649c90ba4bd28ba9 inc/Module/Install.pm
 SHA1 6e1392d80a0f239eecd5664f7f21f922cedb9329 inc/Module/Install/Base.pm
 SHA1 f69417fe831d9cc22a78f00a617afadceade4d81 inc/Module/Install/Can.pm
@@ -27,7 +27,7 @@ SHA1 54fcbed19232ec959bb17cfb4410599afc7f0779 inc/Module/Install/Makefile.pm
 SHA1 7d3be9b158e37b2b2c22084740099955623b1d56 inc/Module/Install/Metadata.pm
 SHA1 0a8b66180229ba2f9deaea1fedd0aacf7a7ace6b inc/Module/Install/Win32.pm
 SHA1 d3352eb33fe43a5f3ead513f645224fe34d73bc9 inc/Module/Install/WriteAll.pm
-SHA1 0d70203d195176d5f321ee3c1c5f66294331472c lib/MooseX/Singleton.pm
+SHA1 dd7332861f0a6633ad5becd1d51109e7b4755b05 lib/MooseX/Singleton.pm
 SHA1 2b92ac130d280736f1c89d4ad094f1d3fb971a1b lib/MooseX/Singleton/Meta/Class.pm
 SHA1 bca39ea3f3e4573a3ddc648c495f081dc753bd23 lib/MooseX/Singleton/Meta/Instance.pm
 SHA1 0dfae5cc3036756cf55ace20e5f0e5bcd0f3e674 lib/MooseX/Singleton/Meta/Method/Constructor.pm
@@ -38,7 +38,7 @@ SHA1 e33ef4377e3a24f197df24bdfa850931964002b3 t/003-immutable.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (Darwin)
 
-iD8DBQFHzs0xsxfQtHhyRPoRAr40AJ4+dgchWmc9mJcCgoOZSG75KE1u/ACgl2FU
-JB1ABK4eRHjH5R1k1Q4KeZo=
-=4zQ8
+iD8DBQFH0RmCsxfQtHhyRPoRAnizAJ0aemq+d0HL/i06RSXoUENltWiTyQCdG6oS
+nI0HePFCw3czJqPweiqa8c0=
+=YlRC
 -----END PGP SIGNATURE-----
