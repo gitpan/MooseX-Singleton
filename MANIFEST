@@ -1,3 +1,4 @@
+.shipit
 ChangeLog
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
