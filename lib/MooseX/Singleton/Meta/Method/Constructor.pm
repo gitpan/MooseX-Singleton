@@ -13,8 +13,7 @@ sub initialize_body {
     # of the possible use cases (even if it
     # requires some adaption on the part of
     # the author, after all, nothing is free)
-    my $source = "use Carp qw( confess );\n";
-    $source .= 'sub {';
+    my $source = 'sub {';
     $source .= "\n" . 'my $class = shift;';
 
     $source .= "\n" . 'my $existing = do { no strict "refs"; \${"$class\::singleton"}; };';
@@ -40,6 +39,8 @@ sub initialize_body {
 
     my $code;
     {
+        my $meta = $self;
+
         # NOTE:
         # create the nessecary lexicals
         # to be picked up in the eval
@@ -63,7 +64,10 @@ sub initialize_body {
         } @type_constraints;
 
         $code = eval $source;
-        confess "Could not eval the constructor :\n\n$source\n\nbecause :\n\n$@" if $@;
+        $self->throw_error(
+            "Could not eval the constructor :\n\n$source\n\nbecause :\n\n$@",
+            error => $@, data => $source )
+            if $@;
     }
     $self->{'body'} = $code;
 }
