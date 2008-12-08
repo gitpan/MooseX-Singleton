@@ -15,8 +15,8 @@ sub initialize_body {
     # the author, after all, nothing is free)
     my $source = 'sub {';
     $source .= "\n" . 'my $class = shift;';
-
-    $source .= "\n" . 'my $existing = do { no strict "refs"; \${"$class\::singleton"}; };';
+ 
+    $source .= "\n" . 'my $existing = do { no strict "refs"; no warnings "once"; \${"$class\::singleton"}; };';
     $source .= "\n" . 'return ${$existing} if ${$existing};';
 
     $source .= "\n" . 'return $class->Moose::Object::new(@_)';
@@ -70,6 +70,10 @@ sub initialize_body {
             if $@;
     }
     $self->{'body'} = $code;
+}
+
+sub _expected_constructor_class {
+    return 'MooseX::Singleton::Object';
 }
 
 no Moose;
