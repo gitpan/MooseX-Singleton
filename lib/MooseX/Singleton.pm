@@ -5,7 +5,7 @@ use Moose::Exporter;
 use MooseX::Singleton::Object;
 use MooseX::Singleton::Meta::Class;
 
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 $VERSION = eval $VERSION;
 
 Moose::Exporter->setup_import_methods( also => 'Moose' );
@@ -86,9 +86,11 @@ All complex software has bugs lurking in it, and this module is no
 exception. If you find a bug please either email me, or add the bug
 to cpan-RT.
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Shawn M Moore E<lt>sartak@gmail.comE<gt>
+
+Dave Rolsky E<lt>autarch@urth.orgE<gt>
 
 =head1 SOME CODE STOLEN FROM
 
@@ -98,11 +100,9 @@ Anders Nor Berle E<lt>debolaz@gmail.comE<gt>
 
 Ricardo SIGNES E<lt>rjbs@cpan.orgE<gt>
 
-Dave Rolsky E<lt>autarch@urth.orgE<gt>
-
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2007, 2008 Shawn M Moore.
+Copyright 2007, 2008 Infinity Interactive
 
 This program is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
