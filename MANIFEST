@@ -1,4 +1,3 @@
-.shipit
 ChangeLog
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
@@ -20,3 +19,5 @@ README
 t/001-basic.t
 t/002-init.t
 t/003-immutable.t
+t/004-build_bug.t
+t/005-build_bug-immutable.t

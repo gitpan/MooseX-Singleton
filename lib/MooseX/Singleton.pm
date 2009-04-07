@@ -1,11 +1,11 @@
 package MooseX::Singleton;
 
-use Moose ();
+use Moose 0.74 ();
 use Moose::Exporter;
 use MooseX::Singleton::Object;
 use MooseX::Singleton::Meta::Class;
 
-our $VERSION = '0.14';
+our $VERSION = '0.15';
 $VERSION = eval $VERSION;
 
 Moose::Exporter->setup_import_methods( also => 'Moose' );
@@ -31,7 +31,7 @@ MooseX::Singleton - turn your Moose class into a singleton
 
 =head1 VERSION
 
-Version 0.08, released 24 May 08
+Version 0.15, released 24 May 08
 
 =head1 SYNOPSIS
 
