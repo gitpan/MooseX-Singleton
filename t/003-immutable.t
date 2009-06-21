@@ -12,7 +12,7 @@ BEGIN {
     }
 }
 
-BEGIN {
+{
     package MooseX::Singleton::Test;
     use MooseX::Singleton;
 
@@ -39,7 +39,7 @@ BEGIN {
 
         $self->bag->{$key} += $value;
     }
-
+__PACKAGE__->meta->make_immutable;
     ::warning_is sub { __PACKAGE__->meta->make_immutable }, '',
         'no warnings when calling make_immutable';
 }
