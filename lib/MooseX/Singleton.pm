@@ -5,19 +5,37 @@ use Moose::Exporter;
 use MooseX::Singleton::Object;
 use MooseX::Singleton::Meta::Class;
 
-our $VERSION = '0.19';
+our $VERSION = '0.20';
 $VERSION = eval $VERSION;
 
 Moose::Exporter->setup_import_methods( also => 'Moose' );
 
 sub init_meta {
     shift;
-    Moose->init_meta(
-        @_,
-        base_class => 'MooseX::Singleton::Object',
-        metaclass  => 'MooseX::Singleton::Meta::Class',
+    my %p = @_;
+
+    Moose->init_meta(%p);
+
+    my $caller = $p{for_class};
+
+    Moose::Util::MetaRole::apply_metaclass_roles(
+        for_class       => $caller,
+        metaclass_roles => ['MooseX::Singleton::Role::Meta::Class'],
+        instance_metaclass_roles =>
+            ['MooseX::Singleton::Role::Meta::Instance'],
+        constructor_class_roles =>
+            ['MooseX::Singleton::Role::Meta::Method::Constructor'],
     );
+
+    Moose::Util::MetaRole::apply_base_class_roles(
+        for_class => $caller,
+        roles =>
+            ['MooseX::Singleton::Role::Object'],
+    );
+
+    return $caller->meta();
 }
+
 
 1;
 
@@ -28,10 +46,6 @@ __END__
 =head1 NAME
 
 MooseX::Singleton - turn your Moose class into a singleton
-
-=head1 VERSION
-
-Version 0.18, released 24 May 08
 
 =head1 SYNOPSIS
 

@@ -8,16 +8,16 @@ inc/Module/Install/Metadata.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/MooseX/Singleton.pm
-lib/MooseX/Singleton/Meta/Class.pm
-lib/MooseX/Singleton/Meta/Instance.pm
-lib/MooseX/Singleton/Meta/Method/Constructor.pm
-lib/MooseX/Singleton/Object.pm
+lib/MooseX/Singleton/Role/Meta/Class.pm
+lib/MooseX/Singleton/Role/Meta/Instance.pm
+lib/MooseX/Singleton/Role/Meta/Method/Constructor.pm
+lib/MooseX/Singleton/Role/Object.pm
 Makefile.PL
 MANIFEST			This list of files
 META.yml
-README
 t/001-basic.t
 t/002-init.t
 t/003-immutable.t
 t/004-build_bug.t
 t/005-build_bug-immutable.t
+t/006-cooperative.t
