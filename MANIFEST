@@ -2,6 +2,7 @@ ChangeLog
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
+inc/Module/Install/ExtraTests.pm
 inc/Module/Install/Fetch.pm
 inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
@@ -21,3 +22,8 @@ t/003-immutable.t
 t/004-build_bug.t
 t/005-build_bug-immutable.t
 t/006-cooperative.t
+xt/author/pod-coverage.t
+xt/author/pod-spell.t
+xt/author/pod.t
+xt/author/tabs.t
+xt/author/version-numbers.t

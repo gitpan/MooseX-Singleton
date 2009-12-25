@@ -1,8 +1,10 @@
-#!/usr/bin/env perl
 package MooseX::Singleton::Role::Meta::Class;
 use Moose::Role;
 use MooseX::Singleton::Role::Meta::Instance;
 use MooseX::Singleton::Role::Meta::Method::Constructor;
+
+our $VERSION = '0.22';
+$VERSION = eval $VERSION;
 
 sub existing_singleton {
     my ($class) = @_;
@@ -11,7 +13,7 @@ sub existing_singleton {
     no strict 'refs';
 
     # create exactly one instance
-    if (defined ${"$pkg\::singleton"}) {
+    if ( defined ${"$pkg\::singleton"} ) {
         return ${"$pkg\::singleton"};
     }
 
@@ -37,7 +39,7 @@ override _construct_instance => sub {
     return ${"$pkg\::singleton"} = super;
 };
 
-no Moose;
+no Moose::Role;
 
 1;
 
