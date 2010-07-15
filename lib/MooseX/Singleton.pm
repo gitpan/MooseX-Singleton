@@ -1,12 +1,12 @@
 package MooseX::Singleton;
 
-use Moose 0.82 ();
+use Moose 0.94 ();
 use Moose::Exporter;
 use MooseX::Singleton::Role::Object;
 use MooseX::Singleton::Role::Meta::Class;
 use MooseX::Singleton::Role::Meta::Instance;
 
-our $VERSION = '0.23';
+our $VERSION = '0.24';
 $VERSION = eval $VERSION;
 
 Moose::Exporter->setup_import_methods( also => 'Moose' );
