@@ -1,9 +1,13 @@
 package MooseX::Singleton::Role::Object;
+BEGIN {
+  $MooseX::Singleton::Role::Object::AUTHORITY = 'cpan:SARTAK';
+}
+BEGIN {
+  $MooseX::Singleton::Role::Object::VERSION = '0.26';
+}
 use Moose::Role;
 use Carp qw( carp );
 
-our $VERSION = '0.25';
-$VERSION = eval $VERSION;
 
 sub instance { shift->new }
 
@@ -38,7 +42,9 @@ no Moose::Role;
 
 1;
 
-__END__
+# ABSTRACT: Object class role for MooseX::Singleton
+
+
 
 =pod
 
@@ -46,9 +52,28 @@ __END__
 
 MooseX::Singleton::Role::Object - Object class role for MooseX::Singleton
 
+=head1 VERSION
+
+version 0.26
+
 =head1 DESCRIPTION
 
 This just adds C<instance> as a shortcut for C<new>.
 
+=head1 AUTHOR
+
+Shawn M Moore <sartak@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2001 by Shawn M Moore.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+
+
+__END__
+
 

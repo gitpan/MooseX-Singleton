@@ -1,10 +1,14 @@
 package MooseX::Singleton::Role::Meta::Class;
+BEGIN {
+  $MooseX::Singleton::Role::Meta::Class::AUTHORITY = 'cpan:SARTAK';
+}
+BEGIN {
+  $MooseX::Singleton::Role::Meta::Class::VERSION = '0.26';
+}
 use Moose::Role;
 use MooseX::Singleton::Role::Meta::Instance;
 use MooseX::Singleton::Role::Meta::Method::Constructor;
 
-our $VERSION = '0.25';
-$VERSION = eval $VERSION;
 
 sub existing_singleton {
     my ($class) = @_;
@@ -39,11 +43,34 @@ override _construct_instance => sub {
     return ${"$pkg\::singleton"} = super;
 };
 
+if ( $Moose::VERSION >= 1.9900 ) {
+    override _inline_params => sub {
+        my $self = shift;
+
+        return
+            'my $existing = do {',
+                'no strict "refs";',
+                'no warnings "once";',
+                '\${"$class\::singleton"};',
+            '};',
+            'return ${$existing} if ${$existing};',
+            super();
+    };
+
+    override _inline_extra_init => sub {
+        my $self = shift;
+
+        return '${$existing} = $instance;';
+    };
+}
+
 no Moose::Role;
 
 1;
 
-__END__
+# ABSTRACT: Metaclass role for MooseX::Singleton
+
+
 
 =pod
 
@@ -51,11 +78,30 @@ __END__
 
 MooseX::Singleton::Role::Meta::Class - Metaclass role for MooseX::Singleton
 
+=head1 VERSION
+
+version 0.26
+
 =head1 DESCRIPTION
 
 This metaclass role makes sure that there is only ever one instance of an
 object for a singleton class. The first call to C<construct_instance> is run
 normally (and then cached). Subsequent calls will return the cached version.
 
+=head1 AUTHOR
+
+Shawn M Moore <sartak@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2001 by Shawn M Moore.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+
+
+__END__
+
 

@@ -1,4 +1,10 @@
 package MooseX::Singleton;
+BEGIN {
+  $MooseX::Singleton::AUTHORITY = 'cpan:SARTAK';
+}
+BEGIN {
+  $MooseX::Singleton::VERSION = '0.26';
+}
 
 use Moose 1.10 ();
 use Moose::Exporter;
@@ -6,8 +12,6 @@ use MooseX::Singleton::Role::Object;
 use MooseX::Singleton::Role::Meta::Class;
 use MooseX::Singleton::Role::Meta::Instance;
 
-our $VERSION = '0.25';
-$VERSION = eval $VERSION;
 
 Moose::Exporter->setup_import_methods( also => 'Moose' );
 
@@ -42,13 +46,19 @@ sub init_meta {
 
 1;
 
-__END__
+# ABSTRACT: turn your Moose class into a singleton
+
+
 
 =pod
 
 =head1 NAME
 
 MooseX::Singleton - turn your Moose class into a singleton
+
+=head1 VERSION
+
+version 0.26
 
 =head1 SYNOPSIS
 
@@ -112,12 +122,6 @@ C<bug-moosex-singleton@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org>. We will be notified, and then you'll automatically be
 notified of progress on your bug as we make changes.
 
-=head1 AUTHORS
-
-Shawn M Moore E<lt>sartak@gmail.comE<gt>
-
-Dave Rolsky E<lt>autarch@urth.orgE<gt>
-
 =head1 SOME CODE STOLEN FROM
 
 Anders Nor Berle E<lt>debolaz@gmail.comE<gt>
@@ -126,12 +130,20 @@ Anders Nor Berle E<lt>debolaz@gmail.comE<gt>
 
 Ricardo SIGNES E<lt>rjbs@cpan.orgE<gt>
 
+=head1 AUTHOR
+
+Shawn M Moore <sartak@gmail.com>
+
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2007-2009 Infinity Interactive
+This software is copyright (c) 2001 by Shawn M Moore.
 
-This program is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+
+
+__END__
+
 
