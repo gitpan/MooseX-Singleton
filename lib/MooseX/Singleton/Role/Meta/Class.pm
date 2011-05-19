@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Singleton::Role::Meta::Class::AUTHORITY = 'cpan:SARTAK';
 }
 BEGIN {
-  $MooseX::Singleton::Role::Meta::Class::VERSION = '0.26';
+  $MooseX::Singleton::Role::Meta::Class::VERSION = '0.27';
 }
 use Moose::Role;
 use MooseX::Singleton::Role::Meta::Instance;
@@ -80,7 +80,7 @@ MooseX::Singleton::Role::Meta::Class - Metaclass role for MooseX::Singleton
 
 =head1 VERSION
 
-version 0.26
+version 0.27
 
 =head1 DESCRIPTION
 
@@ -94,7 +94,7 @@ Shawn M Moore <sartak@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2001 by Shawn M Moore.
+This software is copyright (c) 2011 by Shawn M Moore.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

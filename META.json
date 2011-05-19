@@ -4,7 +4,7 @@
       "Shawn M Moore <sartak@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110240",
+   "generated_by" : "Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.110440",
    "license" : [
       "perl_5"
    ],
@@ -24,7 +24,7 @@
       },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
@@ -46,7 +46,7 @@
          "web" : "http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=gitmo/MooseX-Singleton.git;a=summary"
       }
    },
-   "version" : "0.26",
+   "version" : "0.27",
    "x_authority" : "cpan:SARTAK"
 }
 

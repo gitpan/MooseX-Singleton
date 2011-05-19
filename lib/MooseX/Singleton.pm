@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Singleton::AUTHORITY = 'cpan:SARTAK';
 }
 BEGIN {
-  $MooseX::Singleton::VERSION = '0.26';
+  $MooseX::Singleton::VERSION = '0.27';
 }
 
 use Moose 1.10 ();
@@ -58,7 +58,7 @@ MooseX::Singleton - turn your Moose class into a singleton
 
 =head1 VERSION
 
-version 0.26
+version 0.27
 
 =head1 SYNOPSIS
 
@@ -136,7 +136,7 @@ Shawn M Moore <sartak@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2001 by Shawn M Moore.
+This software is copyright (c) 2011 by Shawn M Moore.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

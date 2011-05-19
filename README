@@ -1,11 +1,11 @@
 
 
 This archive contains the distribution MooseX-Singleton,
-version 0.26:
+version 0.27:
 
   turn your Moose class into a singleton
 
-This software is copyright (c) 2001 by Shawn M Moore.
+This software is copyright (c) 2011 by Shawn M Moore.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
