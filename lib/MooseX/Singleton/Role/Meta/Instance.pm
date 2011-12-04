@@ -2,7 +2,7 @@ package MooseX::Singleton::Role::Meta::Instance;
 BEGIN {
   $MooseX::Singleton::Role::Meta::Instance::AUTHORITY = 'cpan:SARTAK';
 }
-BEGIN {
+{
   $MooseX::Singleton::Role::Meta::Instance::VERSION = '0.27';
 }
 use Moose::Role;

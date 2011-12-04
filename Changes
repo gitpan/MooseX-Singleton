@@ -1,5 +1,9 @@
 Revision history for Perl extension MooseX-Singleton
 
+0.27 2011-12-04
+    - Fix RT Bug #46086, "name used only once" (Thanks chisel for the patch and
+      the test)
+
 0.27 2011-05-19
 
     - Fix 006-cooperative.t - this test requires MooseX::StrictConstructor

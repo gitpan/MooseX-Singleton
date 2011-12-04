@@ -2,7 +2,7 @@ package MooseX::Singleton;
 BEGIN {
   $MooseX::Singleton::AUTHORITY = 'cpan:SARTAK';
 }
-BEGIN {
+{
   $MooseX::Singleton::VERSION = '0.27';
 }
 

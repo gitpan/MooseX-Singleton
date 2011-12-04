@@ -2,7 +2,7 @@ package MooseX::Singleton::Role::Meta::Method::Constructor;
 BEGIN {
   $MooseX::Singleton::Role::Meta::Method::Constructor::AUTHORITY = 'cpan:SARTAK';
 }
-BEGIN {
+{
   $MooseX::Singleton::Role::Meta::Method::Constructor::VERSION = '0.27';
 }
 use Moose::Role;

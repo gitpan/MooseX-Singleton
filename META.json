@@ -4,7 +4,7 @@
       "Shawn M Moore <sartak@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.110440",
+   "generated_by" : "Dist::Zilla version 4.300003, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "perl_5"
    ],

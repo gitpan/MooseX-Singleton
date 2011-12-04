@@ -2,7 +2,7 @@ package MooseX::Singleton::Role::Meta::Class;
 BEGIN {
   $MooseX::Singleton::Role::Meta::Class::AUTHORITY = 'cpan:SARTAK';
 }
-BEGIN {
+{
   $MooseX::Singleton::Role::Meta::Class::VERSION = '0.27';
 }
 use Moose::Role;
@@ -40,6 +40,7 @@ override _construct_instance => sub {
 
     my $pkg = $class->name;
     no strict 'refs';
+    no warnings 'once';
     return ${"$pkg\::singleton"} = super;
 };
 
