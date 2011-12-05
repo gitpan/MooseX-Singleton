@@ -46,7 +46,7 @@
          "web" : "http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=gitmo/MooseX-Singleton.git;a=summary"
       }
    },
-   "version" : "0.27",
+   "version" : "0.28",
    "x_authority" : "cpan:SARTAK"
 }
 

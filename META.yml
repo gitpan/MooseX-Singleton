@@ -22,5 +22,5 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=MooseX-Singleton
   repository: git://git.moose.perl.org/MooseX-Singleton.git
-version: 0.27
+version: 0.28
 x_authority: cpan:SARTAK

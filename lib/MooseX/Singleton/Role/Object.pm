@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Singleton::Role::Object::AUTHORITY = 'cpan:SARTAK';
 }
 {
-  $MooseX::Singleton::Role::Object::VERSION = '0.27';
+  $MooseX::Singleton::Role::Object::VERSION = '0.28';
 }
 use Moose::Role;
 use Carp qw( carp );
@@ -54,7 +54,7 @@ MooseX::Singleton::Role::Object - Object class role for MooseX::Singleton
 
 =head1 VERSION
 
-version 0.27
+version 0.28
 
 =head1 DESCRIPTION
 
