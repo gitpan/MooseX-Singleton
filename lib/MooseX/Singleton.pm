@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Singleton::AUTHORITY = 'cpan:SARTAK';
 }
 {
-  $MooseX::Singleton::VERSION = '0.28';
+  $MooseX::Singleton::VERSION = '0.29';
 }
 
 use Moose 1.10 ();
@@ -58,7 +58,7 @@ MooseX::Singleton - turn your Moose class into a singleton
 
 =head1 VERSION
 
-version 0.28
+version 0.29
 
 =head1 SYNOPSIS
 

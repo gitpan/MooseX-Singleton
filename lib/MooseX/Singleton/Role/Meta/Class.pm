@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Singleton::Role::Meta::Class::AUTHORITY = 'cpan:SARTAK';
 }
 {
-  $MooseX::Singleton::Role::Meta::Class::VERSION = '0.28';
+  $MooseX::Singleton::Role::Meta::Class::VERSION = '0.29';
 }
 use Moose::Role;
 use MooseX::Singleton::Role::Meta::Instance;
@@ -81,7 +81,7 @@ MooseX::Singleton::Role::Meta::Class - Metaclass role for MooseX::Singleton
 
 =head1 VERSION
 
-version 0.28
+version 0.29
 
 =head1 DESCRIPTION
 

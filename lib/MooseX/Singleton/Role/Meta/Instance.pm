@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Singleton::Role::Meta::Instance::AUTHORITY = 'cpan:SARTAK';
 }
 {
-  $MooseX::Singleton::Role::Meta::Instance::VERSION = '0.28';
+  $MooseX::Singleton::Role::Meta::Instance::VERSION = '0.29';
 }
 use Moose::Role;
 use Scalar::Util 'weaken';
@@ -79,7 +79,7 @@ MooseX::Singleton::Role::Meta::Instance - Instance metaclass role for MooseX::Si
 
 =head1 VERSION
 
-version 0.28
+version 0.29
 
 =head1 DESCRIPTION
 
